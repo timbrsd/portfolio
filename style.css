@@ -1,0 +1,605 @@
+/* ==========================================================================
+   RESET ET BASE
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #667eea;
+}
+
+.cv-download {
+    background: #667eea;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cv-download:hover {
+    background: #5a6fd8;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SECTIONS GÉNÉRALES
+   ========================================================================== */
+
+.section {
+    display: none;
+    min-height: 100vh;
+    padding: 100px 0 50px;
+}
+
+.section.active {
+    display: block;
+}
+
+.section-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   SECTION ACCUEIL
+   ========================================================================== */
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 5px solid #667eea;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.hero .status {
+    font-size: 1.2rem;
+    color: #667eea;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-text h2 {
+    margin-bottom: 1rem;
+    color: #667eea;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   SECTION PROJETS
+   ========================================================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.project-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/** DEBUT **/
+.project-trace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-trace-item {
+    text-align: center;
+}
+
+.project-trace-img {
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: contain ;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-trace-img:hover {
+    transform: scale(2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-trace-img:hover {
+    cursor: zoom-in;
+}
+
+.project-trace-item figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/** END **/
+
+
+
+.project-details {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-details.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-details h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-details p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.competences-meta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meta-tag {
+    background: #f0f2ff;
+    color: #667eea;
+    padding: 0.3rem 0.8rem;
+    margin: 0.2rem 0.2rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   SECTION CONTACT
+   ========================================================================== */
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn {
+    background: #667eea;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    background: #667eea;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Navigation mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Contenu mobile */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-content {
+        padding: 2rem 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-meta {
+        justify-content: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 0;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-content {
+        padding: 1.5rem 1rem;
+        margin: 1rem 0;
+    }
+
+    .project-details {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   ANIMATIONS ET EFFETS
+   ========================================================================== */
+
+/* Effet de survol pour les cartes de projet */
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+/* Animation de la navigation */
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #667eea;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Animation des boutons */
+.btn,
+.social-link,
+.cv-download {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before,
+.social-link::before,
+.cv-download::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.btn:hover::before,
+.social-link:hover::before,
+.cv-download:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ==========================================================================
+   UTILITAIRES
+   ========================================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a6fd8;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #667eea;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}

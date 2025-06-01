@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Tim Broussard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav>
+    <div class="container">
+        <div class="logo">Portfolio - Tim Broussard</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+            <li><a href="#" onclick="showSection('projets')">Projets</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#" class="cv-download" onclick="downloadCV()">📄 CV</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Section Accueil -->
+<section id="accueil" class="section active">
+    <div class="container">
+        <div class="section-content">
+            <div class="hero">
+                <h1>Tim Broussard</h1>
+                <img src="ressources/img/photo-de-profil.jpg" alt="Photo de profil" class="profile-img">
+                <p class="status">Étudiant en 2ème année BUT Informatique</p>
+
+                <div class="about-text">
+                    <h2 style="margin-bottom: 1rem; color: #667eea;">À propos de moi</h2>
+                    <p style="margin-top: 1rem;">
+                        Bonjour, je m'appelle Tim Broussard, et je suis actuellement en deuxième année de BUT Informatique à l'IUT de Montpellier-Sète, dans le parcours Réalisation d'Applications : Conception, Développement, Validation (RACDV).
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Mon parcours m'a permis d'acquérir des compétences solides en développement d'applications ainsi quand gestion de projet. J'aime notamment explorer différents univers et apprendre de nouveaux langages de programmation et de nouvelles technologies pour toujours améliorer mes compétences.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        J'ai eu la chance de participer à des événements tels que la Nuit de l'Info, où j'ai pu mettre en pratique mes connaissances tout en travaillant en équipe pour résoudre des problématiques complexes dans un temps limité. Ces expériences m'ont non seulement aidé à renforcer mes compétences techniques, mais aussi à développer des capacités essentielles comme le travail d'équipe, la gestion du temps, et la prise de décision sous pression.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Après mon BUT, je souhaite intégrer une école d'ingénieur qui me permettra d'améliorer encore mes connaissances et de me permettre de trouver le métier que je voudrais faire en suite.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Projets -->
+<section id="projets" class="section">
+    <div class="container">
+        <div class="section-content">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea; font-size: 2.5rem;">Mes Projets</h2>
+
+            <div class="projects-grid">
+                <div class="project-card" onclick="showProjectDetails('sae1')">
+                    <img src="ressources/img/sae-train-main.jpg" alt="sae-train-main" class="project-img">
+                    <h3>SAE Train</h3>
+                    <p>Une SAE dans laquelle nous devions créer une application en Java reproduisant le jeu de société Train</p>
+                </div>
+
+                <div class="project-card" onclick="showProjectDetails('nuit-info')">
+                    <img src="ressources/img/ndi2024.jpg" alt="ndi2024" class="project-img">
+                    <h3>Nuit de l'Info 2024</h3>
+                    <p>Le site web que nous avons réalisé lors de la nuit de l'info 2024 sur le thème "et si l'océan était un corps humain ?"</p>
+                </div>
+
+                <div class="project-card" onclick="showProjectDetails('sae2')">
+                    <img src="ressources/img/sae3a-main.jpg" alt="sae3a" class="project-img">
+                    <h3>SAE Gestion des avis de poursuite d'études </h3>
+                    <p>Une SAE où nous devions créer un site web pour permettre au jury de l'IUT de gérer les avis de poursuites d'études des étudiants</p>
+                </div>
+
+                <div class="project-card" onclick="showProjectDetails('stage')">
+                    <img src="ressources/img/stage.jpg" alt="stage" class="project-img">
+                    <h3>Stage dans le secteur R&D chez Yooz</h3>
+                    <p>Stage de 3 mois chez Yooz sur le sujet "Détection optimisée des incohérences dans les fichiers PDF"</p>
+                </div>
+
+                <div class="project-card" onclick="showProjectDetails('a-venir')">
+                    <div class="project-img">A venir</div>
+                    <h3>A venir</h3>
+                    <p>J'aime m'investir dans de nouveaux projets ! </p>
+                </div>
+            </div>
+
+            <!-- Détails des projets -->
+            <div id="sae1-details" class="project-details">
+                <h3>SAÉ 1 - Développement du jeu Train en Java</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">Durée: 1 semestre</span>
+                    <span class="meta-tag">Équipe: 2 personnes</span>
+                    <span class="meta-tag">Technologies: Java, JavaFX, FXML, Scene Builder, GitLab, Intellij IDEA</span>
+                </div>
+                <p><strong>Contexte:</strong> Une SAE dans laquelle nous devions créer une application en Java reproduisant le jeu de société Train.</p>
+                <p><strong>Compétences acquises:</strong><br></p>
+                <div class="competences-meta">
+                    <span class="meta-tag">Partir des exigences et aller jusqu'à une application complète</span><br>
+                    <span class="meta-tag">Séléctionner les algorithmes adéquats pour répondre à problème donné</span><br>
+                    <span class="meta-tag">Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilsiateurs</span><br>
+                    <span class="meta-tag">Situer son rôle et ses missions au sein d'une équipe informatique</span> </div><br>
+                <p><strong>Détails:</strong> <br><br>
+                    Lors de cette SAE réalisé en binôme, en première année de BUT Informatique, nous avons eu à réaliser une application qui reproduise le jeu de société Train.<br><br>
+
+                    Dans un premier temps, nous avons dû développer en Java, l'application sans interface (avec le terminal), pour cette partie back end, gérer les effets de toutes les cartes et écrire le code de chacune<br><br>
+                    Ensuite, nous avons eu à réaliser une interface graphique pour cette application en  JavaFX basé sur un template de base qui nous a été donné, nous devions notamment gérer la gestion des tuiles, ainsi que de nouvelles contraintes propre à l'interface graphique notamment le cout des tuiles pour poser des rails, les tuiles interdite ainsi que les tuiles bonus.<br><br>
+
+                    Ainsi, cette SAE m'aura permis de développer mes connaissances en Java, JavaFX ainsi qu'initier la gestion du travail en équipe.</p>
+
+                <div class="project-trace-grid">
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/sae-train-1.jpg" alt="SAÉ 1 - Template interface" class="project-trace-img">
+                        <figcaption>Template interface</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/sae-train-2.jpg" alt="SAÉ 1 - Notre interface" class="project-trace-img">
+                        <figcaption>Notre interface</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/sae-train-3.jpg" alt="SAÉ 1 - Boutique" class="project-trace-img">
+                        <figcaption>Boutique</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="nuit-info-details" class="project-details">
+                <h3>Nuit de l'Info 2024</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">Durée: 1 nuit</span>
+                    <span class="meta-tag">Équipe: 9 personnes</span>
+                    <span class="meta-tag">Technologies: HTML, JS, CSS, PHP, SQL, GitLab, PhpStorm</span>
+                </div>
+                <p><strong>Contexte:</strong> Le site web que nous avons réalisé lors de la nuit de l'info 2024 sur le thème "et si l'océan était un corps humain ?" </p>
+                <p><strong>Compétences acquises:</strong><br></p>
+                <div class="competences-meta">
+                    <span class="meta-tag">Partir des exigences et aller jusqu'à une application complète</span><br>
+                    <span class="meta-tag">Déployer des services dans une architecture réseau</span><br>
+                    <span class="meta-tag">Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilsiateurs</span><br>
+                    <span class="meta-tag">Situer son rôle et ses missions au sein d'une équipe informatique</span> </div><br>
+                <p><strong>Détails:</strong> <br><br>
+                    Durant la nuit de l'info 2024, nous avons eu à réaliser un site web sur le thème "et si l'océan était un corps humain ?". La nuit de l'info est un événement sur une nuit durant laquelle chaque équipe doit réaliser un site ou une application sur un thème imposé, en sachant que chaque équipe doit de plus choisir des défis supplémentaires avec à la clé des prix pour les meilleures équipes.
+                    <br><br>
+                    Pour ce projet, nous avons constitué une équipe de 9 membres. Nous avons ensuite réparti cette équipe en plusieurs groupes où chacun avait une tâche assignée. Dans mon cas, j'ai eu à réaliser un chatbot qui répond sur le thème national "et si l'océan était un corps humain ?", incluant des easter eggs faisant apparaître des pop-ups.
+                    <br><br>
+                    Cela m'a permis de développer davantage mes compétences en PHP, en gestion de projets ainsi que d'apprendre les base du JavaScript.
+                </p>
+                <div class="button-container">
+                    <button onclick="window.location.href='//webinfo.iutmontp.univ-montp2.fr/~lambertr/NeuilleVille/web/controleurFrontal.php';" class="btn">Voir le site</button>
+                </div>
+
+                <div class="project-trace-grid">
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/ndi2024-1.jpg" alt="NDI 2024 - Page principale" class="project-trace-img">
+                        <figcaption>Page principale</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/ndi2024-2.jpg" alt="NDI 2024 - Page secondaire" class="project-trace-img">
+                        <figcaption>Page secondaire</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/ndi2024-3.jpg" alt="NDI 2024 - chatbot" class="project-trace-img">
+                        <figcaption>chatbot</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="sae2-details" class="project-details">
+                <h3>SAÉ 2 - Gestion des avis de poursuites d'études</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">Durée: 1 semestre</span>
+                    <span class="meta-tag">Équipe: 4 personnes</span>
+                    <span class="meta-tag">Technologies: HTML, CSS, PHP, SQL, GitLab, PhpStorm</span>
+                </div>
+                <p><strong>Contexte:</strong> Une SAE où nous devions créer un site web pour permettre au jury de l'IUT de gérer les avis de poursuites d'études des étudiants. </p>
+                <p><strong>Compétences acquises:</strong><br></p>
+                <div class="competences-meta">
+                    <span class="meta-tag">Partir des exigences et aller jusqu'à une application complète</span><br>
+                    <span class="meta-tag">Séléctionner les algorithmes adéquats pour répondre à problème donné</span><br>
+                    <span class="meta-tag">Déployer des services dans une architecture réseau</span><br>
+                    <span class="meta-tag">Optimiser une base de données, interagir avec une application et mettre en oeuvre la sécurité</span><br>
+                    <span class="meta-tag">Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilsiateurs</span><br>
+                    <span class="meta-tag">Situer son rôle et ses missions au sein d'une équipe informatique</span> </div><br>
+                <p><strong>Détails:</strong> <br><br>
+                    Lors de cette SAE, nous avons eu à réaliser un site web pour le jury de l'IUT leur permettant de gérer les avis de poursuite d'études mais permettant également aux universités de consulter les avis de poursuite d'études émis par les étudiants. Pour ce projet, nous étions un groupe de 4 et nous avons eu 3 mois pour réaliser ce site web. Lors de cette SAE, nous avons appris les méthodes SCRUM nous permettant de nous répartir le travail efficacement et de planifier au mieux les tâches demandées par notre client.
+                    <br><br>
+                    Durant cette SAE, j'ai pu grandement développer mes compétences en PHP, HTML, CSS pour la partie réalisation du site web. J'ai également pu accroître mes compétences en SQL où nous avons réalisé des procédures, ainsi que des index. Enfin, la partie gestion de projet a été une partie majeure de ce projet et nous avons donc grandement appris à travailler à plusieurs sans se gêner et efficacement.
+                </p>
+                <div class="button-container">
+                    <button onclick="window.location.href='//webinfo.iutmontp.univ-montp2.fr/~barnierd/sae3a-base/web/controleurFrontal.php';" class="btn">Voir le site</button>
+                </div>
+
+                <div class="project-trace-grid">
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/sae3a-1.jpg" alt="SAE 2 - Page principale" class="project-trace-img">
+                        <figcaption>Page principale</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/sae3a-2.jpg" alt="SAE 2 - Liste étudiants" class="project-trace-img">
+                        <figcaption>Liste étudiants</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/sae3a-3.jpg" alt="SAE 2 - Page création comptes" class="project-trace-img">
+                        <figcaption>Page création comptes</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div id="stage-details" class="project-details">
+                <h3>Stage dans le secteur R&D chez Yooz</h3>
+                <div class="project-meta">
+                    <span class="meta-tag">Durée: 3 mois</span>
+                    <span class="meta-tag">Équipe: 1 personne</span>
+                    <span class="meta-tag">Technologies: C++, XML, OCR, Classifieur, PDF, JPG</span>
+                </div>
+                <p><strong>Contexte:</strong> Stage de 3 mois chez Yooz sur le sujet "Détection optimisée des incohérences dans les fichiers PDF". </p>
+                <p><strong>Compétences acquises:</strong><br></p>
+                <div class="competences-meta">
+                    <span class="meta-tag">Partir des exigences et aller jusqu'à une application complète</span><br>
+                    <span class="meta-tag">Séléctionner les algorithmes adéquats pour répondre à problème donné</span><br>
+                    <span class="meta-tag">Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs</span><br>
+                    <span class="meta-tag">Situer son rôle et ses missions au sein d'une équipe informatique</span> </div><br>
+                <p><strong>Détails:</strong> <br><br>
+                    Durant mon stage de trois mois au sein de l’entreprise Yooz, j’ai été intégré à l’équipe «Fraude & Technologies» du département Recherche. Ma mission principale a consisté à améliorer un outil de détection d’incohérences dans les documents PDF, utilisé dans le cadre de la solution YoozProtect pour identifier les fraudes documentaires. Le projet avait déjà été amorcé par d'autres stagiaires précédemment, et j’ai donc dû prendre en main un code existant particulièrement dense, écrit en C++, un langage que je ne connaissais pas au début du stage.
+                    <br><br>
+                    J’ai donc adopté une approche progressive et rigoureuse. Dans un premier temps, je me suis consacré à comprendre et m’adapter à l’architecture du projet. Cela m’a demandé de me former au C++ en autodidacte, en m’appuyant sur mes connaissances en programmation orientée objet, notamment acquises en Java. Une fois cette base technique consolidée, j’ai pu entamer un travail de réappropriation du code, en le restructurant pour qu’il puisse s’intégrer plus efficacement dans la chaîne de traitement de Yooz. Concrètement, cela signifiait passer d’un traitement par lot de documents à un traitement page par page, mieux adapté aux besoins de l’entreprise.
+                    <br><br>
+                    Dans un second temps, j’ai travaillé à l’amélioration de l’algorithme de détection, en ciblant la réduction du nombre de faux positifs. J’ai analysé finement les erreurs de classification, en identifiant les problèmes de l’algorithme existant, et j’ai ainsi pu mettre en place plusieurs correctifs
+                    <br><br>
+                    Au fil de ces améliorations, les performances de l’outil se sont nettement améliorées, avec une détection bien plus fiable sur plusieurs classes de documents. Ce stage m’a permis de développer des compétences concrètes en adaptation à un code existant, en optimisation algorithmique et en gestion de projet.</p>
+                <div class="button-container">
+                    <button onclick="window.open('ressources/rapport/Rapport_de_stage-Yooz-Tim_Broussard.pdf', '_blank');" class="btn">Voir le rapport</button>
+                </div>
+
+                <div class="project-trace-grid">
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/stage-1.jpg" alt="Stage 2025 - Workflow Yooz" class="project-trace-img">
+                        <figcaption>Workflow Yooz</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/stage-2.jpg" alt="Stage 2025 - Exemple de graphe représentant un MétaBloc fraudé" class="project-trace-img">
+                        <figcaption>Exemple de graphe représentant un MétaBloc fraudé</figcaption>
+                    </figure>
+                    <figure class="project-trace-item">
+                        <img src="ressources/img/stage-3.jpg" alt="Stage 2025 - Schéma représentant l’élargissement d’un graphe" style="height: 300px; width: auto" class="project-trace-img">
+                        <figcaption>Schéma représentant l’élargissement d’un graphe</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-content">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #667eea; font-size: 2.5rem;">Contact</h2>
+
+            <form class="contact-form" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit" class="btn">Envoyer le message</button>
+                </div>
+            </form>
+
+            <div class="social-links">
+                <a href="https://github.com/timbrsd" target="_blank" class="social-link">GitHub</a>
+                <a href="https://linkedin.com/in/tim-broussard" target="_blank" class="social-link">LinkedIn</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p><strong>Email:</strong> tim.broussard@etu.umontpellier.fr</p>
+                <p><strong>Localisation:</strong> Montpellier, France</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<a href="#" id="scrollTopBtn" class="scroll-top" title="Remonter">
+    <img src="ressources/img/fleche-haut.jpg" alt="Flèche vers le haut">
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
