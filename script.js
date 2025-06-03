@@ -159,3 +159,14 @@ document.getElementById('scrollTopBtn').addEventListener('click', function(e) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+function navigateToProject(projectId) {
+    // Active la section projets
+    showSection('projets');
+
+    // Laisse le temps à la section de s'afficher avant d'appeler showProjectDetails
+    setTimeout(() => {
+        showProjectDetails(projectId);
+    }, 300); // 300 ms est en général suffisant
+}
+
